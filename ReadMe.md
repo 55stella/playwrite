@@ -40,6 +40,7 @@ The CI/CD pipeline is defined in the `.github/workflows/playwrite.yml` file and 
 - Pushes to the `main` branch
 - Pull requests to the `main` branch
 
+
 ## Common Issues
 
 ### `net::ERR_ABORTED` or `frame was detached` Error
