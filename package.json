@@ -1,0 +1,18 @@
+{
+  "name": "playwright-ui-task",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "ui:test": "playwright test src/test/UI-test.spec.ts",
+    "allure-report": "npx allure serve allure-results",
+    "default-report": "npx playwright test --reporter=html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.45.1",
+    "@types/node": "^20.14.9"
+  }
+}
