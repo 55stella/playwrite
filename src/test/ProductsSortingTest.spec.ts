@@ -1,5 +1,5 @@
 import { chromium, expect, Page, test } from "@playwright/test";
-import { ProductPage } from "../Page/Productpage";
+import { ProductPage } from "../page/ProductPage.page";
 import { LoginPage } from "../Page/login.page";
 
 test.describe("Products Sorting Test", () => {

@@ -1,7 +1,7 @@
 import { Page } from "@playwright/test";
 
-export default class PageBase {
-  static async navigator(page: Page, url: string){
+export default class PageActions {
+  static async navigator(page: Page, url: string) {
     try {
       await page.goto(url, { waitUntil: "commit" });
       await page.waitForLoadState("domcontentloaded");
@@ -10,7 +10,7 @@ export default class PageBase {
     }
   }
 
-  static async click(page: Page, locator: string){
+  static async click(page: Page, locator: string) {
     try {
       await page.click(locator);
     } catch (error) {
@@ -21,7 +21,7 @@ export default class PageBase {
     }
   }
 
-  static async fill(page: Page, locator: string, text: string){
+  static async fill(page: Page, locator: string, text: string) {
     try {
       await page.fill(locator, text);
     } catch (error) {
@@ -32,17 +32,14 @@ export default class PageBase {
     }
   }
 
-  static async selectOption(
-    page: Page,
-    locator: string,
-    textToSelect: string
-  ) {
+  static async selectOption(page: Page, locator: string, textToSelect: string) {
     try {
       await page.selectOption(locator, textToSelect);
     } catch (error) {
-      console.error(`There is an error selecting an element with the value, ${textToSelect}`, error);
+      console.error(
+        `There is an error selecting an element with the value, ${textToSelect}`,
+        error
+      );
     }
   }
-
-  
 }

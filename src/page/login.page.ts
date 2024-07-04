@@ -1,5 +1,6 @@
 import { Page, expect } from "@playwright/test";
-import pageBase from "./PageBase.page";
+import pageActions from "./PageBase.page";
+
 export class LoginPage {
   public page: Page;
   private loginBtn: string;
@@ -14,17 +15,17 @@ export class LoginPage {
   }
 
   async launchURL() {
-    await pageBase.navigator(this.page, "https://www.saucedemo.com/");
+    await pageActions.navigator(this.page, "https://www.saucedemo.com/");
   }
 
   async sendUsername(username: string) {
-    await pageBase.fill(this.page, this.username, username);
+    await pageActions.fill(this.page, this.username, username);
   }
   async sendPassword(password: string) {
-    await pageBase.fill(this.page, this.password, password);
+    await pageActions.fill(this.page, this.password, password);
   }
   async clickLoginBtn() {
-    await pageBase.click(this.page, this.loginBtn);
+    await pageActions.click(this.page, this.loginBtn);
   }
 
   async loginUser(username: string, password: string) {
