@@ -23,6 +23,12 @@ This project uses Playwright for end-to-end testing and GitHub Actions for conti
    ```bash
    npm install
    ```
+3. Run test and generate report
+  npm run ui:test
+  npm run allure-report
+  npm run default-report
+
+
 
 
 ## Running Tests Locally

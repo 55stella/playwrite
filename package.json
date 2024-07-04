@@ -1,15 +1,19 @@
 {
   "name": "playwright-ui-task",
   "version": "1.0.0",
-  "description": "",
+  "description": "Follow Steps below",
   "main": "index.js",
   "scripts": {
     "ui:test": "playwright test src/test/UI-test.spec.ts",
     "allure-report": "npx allure serve allure-results",
     "default-report": "npx playwright test --reporter=html"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/55stella/playwrite.git"
+  },
   "keywords": [],
-  "author": "",
+  "author": "Stella Agbadu",
   "license": "ISC",
   "devDependencies": {
     "@playwright/test": "^1.45.1",
